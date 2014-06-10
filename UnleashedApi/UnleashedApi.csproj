@@ -53,9 +53,6 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="TradeGeckoApi">
-      <HintPath>..\packages\TradeGeckoApi.1.21.0.0\lib\net45\TradeGeckoApi.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Exceptions\AuthenticationException.cs" />
