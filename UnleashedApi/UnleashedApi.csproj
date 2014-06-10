@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AAD2E997-C923-4D76-A09C-6BA1C7818698}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UnleashedApi</RootNamespace>
+    <AssemblyName>UnleashedApi</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <BuildPackage>true</BuildPackage>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp">
+      <HintPath>..\packages\RestSharp.104.4.0\lib\net4\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TradeGeckoApi">
+      <HintPath>..\packages\TradeGeckoApi.1.21.0.0\lib\net45\TradeGeckoApi.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Exceptions\AuthenticationException.cs" />
+    <Compile Include="Exceptions\InvalidRequestException.cs" />
+    <Compile Include="Exceptions\NotFoundException.cs" />
+    <Compile Include="Exceptions\RequestException.cs" />
+    <Compile Include="Extensions\SalesOrderExtensions.cs" />
+    <Compile Include="IApiSettings.cs" />
+    <Compile Include="Models\Address.cs" />
+    <Compile Include="Models\BillOfMaterial.cs" />
+    <Compile Include="Models\BillOfMaterialLine.cs" />
+    <Compile Include="Models\Company.cs" />
+    <Compile Include="Models\Currency.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\CustomerAddress.cs" />
+    <Compile Include="Models\CustomerType.cs" />
+    <Compile Include="Models\DeliveryMethod.cs" />
+    <Compile Include="Models\IKey.cs" />
+    <Compile Include="Models\LinkedCustomer.cs" />
+    <Compile Include="Models\LinkedProduct.cs" />
+    <Compile Include="Models\PaginatedList.cs" />
+    <Compile Include="Models\PaginationMetadata.cs" />
+    <Compile Include="Models\PaymentTerm.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProductGroup.cs" />
+    <Compile Include="Models\PurchaseOrder.cs" />
+    <Compile Include="Models\PurchaseOrderLine.cs" />
+    <Compile Include="Models\RequestMetadata.cs" />
+    <Compile Include="Models\SalesInvoice.cs" />
+    <Compile Include="Models\SalesInvoiceLine.cs" />
+    <Compile Include="Models\SalesOrder.cs" />
+    <Compile Include="Models\SalesOrderGroup.cs" />
+    <Compile Include="Models\SalesOrderLine.cs" />
+    <Compile Include="Models\SalesPerson.cs" />
+    <Compile Include="Models\SalesShipment.cs" />
+    <Compile Include="Models\SalesShipmentLine.cs" />
+    <Compile Include="Models\SellPriceTier.cs" />
+    <Compile Include="Models\LinkedSupplier.cs" />
+    <Compile Include="Models\ShippingCompany.cs" />
+    <Compile Include="Models\StockAdjustment.cs" />
+    <Compile Include="Models\StockAdjustmentLine.cs" />
+    <Compile Include="Models\StockOnHand.cs" />
+    <Compile Include="Models\Supplier.cs" />
+    <Compile Include="Models\Tax.cs" />
+    <Compile Include="Models\UnitOfMeasure.cs" />
+    <Compile Include="Models\Warehouse.cs" />
+    <Compile Include="Models\WarehouseStockTransfer.cs" />
+    <Compile Include="Models\WarehouseStockTransferLine.cs" />
+    <Compile Include="Resources\BillOfMaterialResource.cs" />
+    <Compile Include="Resources\CompanyResource.cs" />
+    <Compile Include="Resources\CustomerDeliveryAddressResource.cs" />
+    <Compile Include="Resources\CustomerResource.cs" />
+    <Compile Include="Resources\CustomerTypeResource.cs" />
+    <Compile Include="Models\IPaginatedList.cs" />
+    <Compile Include="Resources\DeliveryMethodResource.cs" />
+    <Compile Include="Resources\PaymentTermResource.cs" />
+    <Compile Include="Resources\ProductGroupResource.cs" />
+    <Compile Include="Resources\ProductResource.cs" />
+    <Compile Include="Resources\PurchaseOrderResource.cs" />
+    <Compile Include="Resources\Resource.cs" />
+    <Compile Include="Resources\SalesInvoiceResource.cs" />
+    <Compile Include="Resources\SalesOrderGroupResource.cs" />
+    <Compile Include="Resources\SalesOrderResource.cs" />
+    <Compile Include="Resources\SalesPersonResource.cs" />
+    <Compile Include="Resources\SalesShipmentResource.cs" />
+    <Compile Include="Resources\ShippingCompanyResource.cs" />
+    <Compile Include="Resources\StockAdjustmentResource.cs" />
+    <Compile Include="Resources\StockOnHandResource.cs" />
+    <Compile Include="Resources\SupplierResource.cs" />
+    <Compile Include="Resources\TaxResource.cs" />
+    <Compile Include="Resources\UnitOfMeasureResource.cs" />
+    <Compile Include="Resources\WarehouseResource.cs" />
+    <Compile Include="Resources\WarehouseStockTransferResource.cs" />
+    <Compile Include="Services\HmacSignatureAuthenticator.cs" />
+    <Compile Include="Services\ClientExecutionService.cs" />
+    <Compile Include="Services\IClientExecutionService.cs" />
+    <Compile Include="Services\RestRequestExtensions.cs" />
+    <Compile Include="UnleashedClient.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
