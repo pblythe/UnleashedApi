@@ -1,6 +1,8 @@
 Unleashed Api Bindings
 ============
 
+**My time is limited to focus on this project, I'd be more than happy to hand it over to a dedicated contributor.**
+
 API bindings for creating and reading resources in [Unleashed Inventory](http://www.unleashedsoftware.com/)
 
 Authentication is made by signing requests with HMACSHA256 API key/secret available once signed in.
