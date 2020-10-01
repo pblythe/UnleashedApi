@@ -9,8 +9,8 @@ namespace UnleashedApi.Resources
     {
         public SalesInvoiceResource(IClientExecutionService settings) : base(settings) { }
 
-        private const string ListUrl = "/SalesInvoices/{page}";
-        private const string ByIdUrl = "/SalesInvoices/{id}";
+        private const string ListUrl = "/Invoices/{page}";
+        private const string ByIdUrl = "/Invoices/{id}";
 
         public Task<IPaginatedList<SalesInvoice>> List(int page = 1, int? pageSize = null, string customerCode = null, DateTime? startDate = null, DateTime? endDate = null, DateTime? modifiedSince = null, string orderNumber = null)
         {

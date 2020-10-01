@@ -9,8 +9,8 @@ namespace UnleashedApi.Resources
     {
         public SalesShipmentResource(IClientExecutionService client) : base(client) { }
 
-        private const string ListUrl = "/SalesShipment/{page}";
-        private const string ByIdUrl = "/SalesShipment/{id}";
+        private const string ListUrl = "/SalesShipments/{page}";
+        private const string ByIdUrl = "/SalesShipments/{id}";
 
         public Task<IPaginatedList<SalesShipment>> List(int page = 1, int? pageSize = null, string shippingStatus = null, DateTime? startDate = null, DateTime? endDate = null, DateTime? modifiedSince = null, string orderNumber = null)
         {
